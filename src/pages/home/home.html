@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search" [(ngModel)]="autocomplete.query" (ionInput)="updateSearch()"></ion-searchbar>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let place of places" (click)="detail(place)">
+      {{place.structured_formatting.main_text}}
+    </ion-item>
+  </ion-list>
+</ion-content>
